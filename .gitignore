@@ -1,0 +1,57 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.exe
+*.obj
+*.dll
+*.lib
+*.dylib
+
+# Compiled binaries
+tools/openc2lint
+tools/openc2lint.exe
+examples/agent_example
+examples/agent_example.exe
+.cursor/
+c2lint/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+tmp/
+temp/
