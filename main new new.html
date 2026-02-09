@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .header {
+            background-color: #1abc9c;
+            padding: 5px;
+            text-align: center;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: left;
+            padding: 20px 20px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        
+        .topnav a:hover {
+            background-color: #4CA000;
+            color: black;
+        }
+        
+        .aligncenter {
+            text-align: center;
+        }
+        
+        .column {
+            float: left;
+            padding: 10px;
+        }
+        
+        .column.side {
+            width: 25%;
+            background-color: #afdcec;
+        }
+        
+        .column.middle {
+            width: 50%;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .dropdown:hover .dropbtn,
+        .dropbtn:focus {
+            background-color: #4CA000;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color:  #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #1abc9c;
+            color: black;
+            text-align: center;
+            height: 65px;
+        }
+        
+        .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+    </style>
+    <style>
+        table {
+            width: 100%;
+        }
+        
+        body {
+            background-color: #F5F6CE;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        #t01 tr:nth-child(even) {
+            background-color: #F3F781;
+        }
+        
+        #t01 tr:nth-child(odd) {
+            background-color: #F2F5A9;
+        }
+        
+        #t01 th {
+            background-color: BLACK;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="topnav">
+        <a href="https://vit.ac.in/"><img src="vit_logo_approved.jpg" style="width:150px; height:40px; "></a>
+        <div class="dropdown">
+            <button class="dropbtn">Home
+    <i class="fa fa-caret-down"></i>
+  </button>
+            <div class="dropdown-content">
+                <a href="#section1">About Vit</a>
+                <a href="#section2">Scope</a>
+
+            </div>
+        </div>
+        <!--<a href="scope.html">Scope</a>--->
+
+
+        <a href="#section3">Courses offered</a>
+        <div class="dropdown">
+            <button class="dropbtn">Department Activities
+    <i class="fa fa-caret-down"></i>
+  </button>
+            <div class="dropdown-content">
+                <a href="upcoming events.html">Upcoming Events</a>
+                <a href="vit clubs.html">About clubs</a>
+                <a href="studentachievement.html">Student Achievement</a>
+            </div>
+        </div>
+        <a href="#section4">Faculty Details</a>
+        <a href="Placements.html">Placements</a>
+        <div class="dropdown">
+            <button class="dropbtn">CEO
+    <i class="fa fa-caret-down"></i>
+  </button>
+            <div class="dropdown-content">
+                <a href="table.html">Exam Time Table</a>
+                <a href="result.html">Result</a>
+            </div>
+        </div>
+   
+    <div class="header">
+
+        <h1 style="text-align:center;"> SpotLight</h1>
+    </div></div>
+
+    <aside class="row">
+        <aside class="column side">
+            <h2>RANKING AND ACCREDITATION</h2>
+            <h3>
+                <ul>
+                    <li>Recognized as an Institution of Eminence by Govt. of India.</li>
+                    <li>No. 1 Private University for Innovation as recognized by ARIIA, Govt. of India.</li>
+                    <li>Among the Top 3% of the world's universities as ranked by QS Global World Ranking.</li>
+                    <li>Ranked among the top 301 - 400 universities in the world for Computer Science, by The Times Higher Education World Ranking.</li>
+                </ul>
+            </h3>
+        </aside>
+
+        <div class="column middle">
+            <a href="https://vit.ac.in"><img src="vit-ioe-updated-opti_0.jpg" width="930" height="500" align="canvas"></a>
+        </div>
+
+        <aside class="column side">
+            <h2>ADMISSIONS</h2>
+            <h3>
+                <ul>
+                    <li>VIT Group of Institutions offer 51 Undergraduate, 33 Postgraduate, 11 Integrated, 2 Research programmes and 2 M.Tech Industrial Programmes.</li>
+                    <li>In addition, full-time Ph.D. in Engineering and Management disciplines, Ph.D. in Science and Languages and Integrated Ph.D. programmes in engineering disciplines are offered.</li>
+                </ul>
+            </h3>
+        </aside>
+    </aside>
+</body>
+<br>
+<br>
+<h2 id="section1">About Vit</h2>
+<h1 style="color:white; text-shadow: 2px 2px 5px red; background-color:#1abc9c; text-align: center; margin-top: 0; padding-top:5px ; height:50px;"><b>Overview About Vit</b></h1>
+<div class="container" style="width:100%; height:400px;">
+    <div class="Full" style="width:60%; float:left;">
+        <p style="font-size: 20px; margin-left: 10px; ">VIT was established with the aim of providing quality higher education on par with international standards. It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis.The campus has a cosmopolitan
+            atmosphere with students from all corners of the globe. Experienced and learned teachers are strongly encouraged to nurture the students. The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit
+            of excellence. In fact, it has become a way of life for us. The highly motivated youngsters on the campus are a constant source of pride. Our Memoranda of Understanding with various international universities are our major strength. They provide
+            for an exchange of students and faculty and encourage joint research projects for the mutual benefit of these universities. Many of our students, who pursue their research projects in foreign universities, bring high quality to their work
+            and esteem to India and have done us proud. With steady steps, we continue our march forward. We look forward to meeting you here at VIT.</p>
+    </div>
+    <div class="half" style="width:40%; float:right;">
+        <img src="vitabout.jpg" style="width:630px; height:300px; margin-left: 20px;">
+    </div>
+</div>
+<h1 style="color:white; text-shadow: 2px 2px 5px red; background-color:#1abc9c; text-align: center; margin-top: 0; padding-top:5px ; height:50px;"><b> History of Vit</b></h1>
+<div class="container1" style="width:100%; height:290px;">
+    <div class="half1" style="width:40%; float:left;">
+        <img src="history.png" style="width:600px; height:350px; ">
+    </div>
+    <div class="Full1" style="width:60%; float:right;">
+        <p style="font-size: 20px; margin-left: 20px; ">It was established under Section 3 of the University Grants Commission (UGC) Act, 1956, and was founded in 1984 as a self-financing institution called the Vellore Engineering College. The Union Ministry of Human Resources Development conferred
+            University status on Vellore Engineering College in 2001. The University is headed by its founder and Chancellor, Dr. G. Viswanathan, a former Parliamentarian and Minister in the Tamil Nadu Government. In recognition of his service to India
+            in offering world class education, he was conferred an honorary doctorate by the West Virginia University, USA. Mr.Sankar Viswanathan, Dr.Sekar Viswanathan and Mr.G.V. Selvam are the Vice-Presidents; Dr. Anand A. Samuel is the Vice-Chancellor
+            and Dr. S. Narayanan is the Pro-Vice-Chancellor.</p>
+    </div>
+
+</div>
+<br>
+<br>
+<div class="scope" style="background-color: #ffe6e6;">
+    <h2 id="section2"></h2>
+    <br>
+    <br>
+    <h1 style="color:#fff; background-color: #337ab7; text-align: center; margin: 0; height:70px;"><b>School of Computer Science and Engineering (SCOPE)</b></h1>
+    <div class="container">
+        <img src="scope_dean.jpg" style="margin-left: 40%; ">
+    </div>
+    <article>
+        <p style="font-size: 18px;"> The mission of the School is to strive persistently for achieving excellence in computing disciplines. It is being pursued through its spectrum of academic programmes in computing of contemporary standards. The main aim is to produce computing
+            graduates with potential, to design and develop systems involving the integration of software and hardware devices, employ innovative approaches in programming and problem solving and solving problems, create Large Scale Software Systems and
+            build data/computing infrastructure for an organization.</p>
+        <p style="font-size: 18px;">History of computing discipline at VIT dates back to 1993, when the Department of Computer Science & Engineering was established to meet the demand for well-qualified computer professionals. The School of Computer Science and Engineering (SCOPE)
+            was conceived in the year 2009.</p>
+        <p style="font-size: 18px;">At present, the School headed by Dr. Saravanan R, has more than 7000 students and 158 core faculty members apart from many visiting professors, distinguished professionals from industry, eminent researchers and teaching/ research assistants. With
+            an aim to carve a niche for itself in Computer Science and allied domains, the School strives to:</p>
+        <br>
+        <p style="font-size: 18px;">The school has one of the best infrastructure including domain-specific labs associated with the technical departments mentioned below - many of these labs are sponsored by industry leaders e.g. IBM, Cisco, Sun Microsystems, Red Hat and Microsoft.
+            The School has a good record of organising seminars, workshops, symposia and conferences in emerging technological areas. With an objective of developing core competence in the respective subject matter specialisations and special interest
+            groups for learning newer technologies, the School has formed the following technical departments: </p>
+        <ul style="font-size: 20px;">
+            <li>Department of Analytics
+            </li>
+            <li>Department of Computational Intelligence</li>
+            <li> Department of Database Systems</li>
+            <li>Department of Software Systems</li>
+            <li>Department of Information Security</li>
+        </ul>
+    </article>
+</div>
+<br>
+<br>
+<div class="course" style="background-color: #99ffff;">
+    <h2 id="section3"></h2>
+    <h1 style="color:#fff; background-color: #0a4375; text-align: center; margin: 0; height:70px;"><b>Courses Offered </b></h1>
+    <h2>I. Engineering programmes (4 year)</h2>
+    <ul style="list-style-type:square">
+        <li style="font-size: 24px;">B.Tech - Biotechnology</li>
+        <li style="font-size: 24px;"> B.Tech - Chemical Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Civil Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with specialisation in Bioinformatics</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with specialisation in Information Security</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with specialisation in IoT</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with Business Systems(in collaboration with TCS)</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with specialisation in Data Science</li>
+        <li style="font-size: 24px;"> B.Tech - Computer Science and Engineering with specialisation in Block Chain Technology</li>
+        <li style="font-size: 24px;"> B.Tech - Electrical and Electronics Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Electronics and Communication Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Electronics and Instrumentation Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Electronics and Communication with specialisation in Biomedical Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Information Technology</li>
+        <li style="font-size: 24px;"> B.Tech - Mechanical Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Mechanical with specialisation in Automotive Engineering</li>
+        <li style="font-size: 24px;"> B.Tech - Production and Industrial Engineering</li>
+
+    </ul>
+    <br>
+    <br>
+    <h2> II. Integrated Masters programmes (5 year)</h2>
+    <ul style="list-style-type:square">
+        <li style="font-size: 24px;">integrated M.Tech. Software Engineering </li>
+        <li style="font-size: 24px;"> Integrated M.Tech. CSE in collaboration with Virtusa</li>
+        <li style="font-size: 24px;">Integrated M.Tech. Computer Science and Engineering with specialisation In Data Science</li>
+        <li style="font-size: 24px;"> Integrated M.Sc. Biotechnology
+
+        </li>
+        <li style="font-size: 24px;"> Integrated M.Sc. Computational Statistics and Data Analytics</li>
+
+    </ul>
+    <br>
+    <br>
+    <h2> III. PG programmes (2 year)</h2>
+    <ul style="list-style-type:square">
+        <li style="font-size: 24px;">M.Sc Applied MicroBiology</li>
+        <li style="font-size: 24px;"> M.Sc Biomedical Genetics</li>
+        <li style="font-size: 24px;"> M.Sc Biotechnology</li>
+        <li style="font-size: 24px;"> M.Sc Chemistry</li>
+        <li style="font-size: 24px;"> M.Sc Data Science</li>
+        <li style="font-size: 24px;"> M.Sc Business Statistics</li>
+        <li style="font-size: 24px;"> M.Sc Physics</li>
+
+    </ul>
+    <br>
+    <br>
+    <h2> IV. Research Programmes</h2>
+    <ul style="list-style-type:square">
+        <li style="font-size: 24px;"> Ph.D - Internal Full Time only</li>
+        <li style="font-size: 24px;"> Integrated Ph.D - Internal Full Time only</li>
+
+
+    </ul>
+</div>
+<br>
+<br>
+<br>
+<h2 id="section4"></h2>
+<h1 style="text-shadow: 2px 2px 5px red; background-color: #ff6600; text-align: center; margin: 0; height:60px;"><b>Vit Faculty Details</b></h1><br><br>
+<table id="t01">
+    <tr>
+
+        <th>School</th>
+        <th>Faculty Name </th>
+        <th>Contact </th>
+        <th> VIT-Email </th>
+        <th>More Details </th>
+
+    </tr>
+    <tr>
+        <td> SCOPE </td>
+        <td>NALINI L</td>
+        <td>99441 06067</td>
+        <td>nalini.l@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+
+    <tr>
+        <td> SENSE </td>
+        <td>Mohan S</td>
+        <td>65320 06079</td>
+        <td>mohan.subramani@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+    <tr>
+        <td> SCOPE </td>
+        <td>Prabhu G</td>
+        <td>99443 74841</td>
+        <td>aprabhu@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+
+    <tr>
+        <td> SITE </td>
+        <td>Ramesh S</td>
+        <td>99441 06067</td>
+        <td>ramesh.s@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+
+    <tr>
+        <td> SCOPE </td>
+        <td>Shanthi V</td>
+        <td>99443 74841</td>
+        <td>shanthi.veerasamy@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+    <tr>
+        <td> SELECT </td>
+        <td>Anuradha D</td>
+        <td>98942 05471</td>
+        <td>danuradha@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+    <tr>
+        <td> SCOPE </td>
+        <td>Ruby D</td>
+        <td>98942 05471</td>
+        <td>ruby.d@vit.ac.in</td>
+        <td><input type="button" value="More Details" style="background-color:#ff6600 ; color:white; padding:3%;"></td>
+
+    </tr>
+
+</table>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+    <p style="float: right; margin-right: 15px;"> Created by Deep Zatakiya</p>
+    <div class="footer-icons">
+        <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+        <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+        <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="www.youtube.com"><i class="fa fa-youtube"></i></a>
+
+    </div>
+
+</div>
+
+
+</html>
